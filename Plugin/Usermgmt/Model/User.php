@@ -230,8 +230,8 @@ class User extends UserMgmtAppModel {
 			// we could not send the email, ignore it
 			$this->log('why? '.$ex);
 			$result="Could not send verification email to userid-".$userId;
+			$this->log($result, LOG_DEBUG);
 		}
-		$this->log($result, LOG_DEBUG);
 	}
 	/**
 	 * Used to generate activation key
