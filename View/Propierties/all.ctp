@@ -156,7 +156,7 @@
 				</div>
 				<div class="col-sm-6 right">
 
-					<div class="propiedad_list flip">
+<!-- 					<div class="propiedad_list flip">
 						<div class="flip_items">
 							<div class="box caja front">
 								<div class="col-sm-6 pregunta"><img src="<?php echo $this->webroot; ?>img/calendario_icon.png"></img>Período de tenencia estimado</div>
@@ -175,7 +175,7 @@
 									</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 
 					<div class="propiedad_list flip">
 						<div class="flip_items">
