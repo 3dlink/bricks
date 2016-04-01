@@ -134,7 +134,7 @@
 	</form>  
 	</div>
 
-	<!-- <div id="propierties_list"> -->
+	<div id="propierties_list">
 
 		<?php foreach ($propierties as $propierty) { ?>
 			<div id="prop_1" class="propiedad">
