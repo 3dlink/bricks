@@ -65,8 +65,8 @@
 
 				<div class="col-md-6">
 	        <div class="form-group">
-	          <label>Información adicional</label>
-	          <?php echo $this->Form->input('info',array('div'=>false, 'required'=>true,'label'=>false,'class'=>'form-control','type'=>'textarea')); ?>
+	          <label>Información adicional - Max. 300 caracteres</label>
+	          <?php echo $this->Form->input('info',array('div'=>false,'required'=>true,'label'=>false,'maxlength'=>300,'class'=>'form-control','type'=>'textarea')); ?>
 	        </div>
 	      </div>
 
@@ -200,27 +200,27 @@
             Guardar
           </button>
         </div>
-      </div>          
-    </fieldset>  
+      </div>
+    </fieldset>
 </article>
 
 
 <script type="text/javascript">
 
-$("#my-dropzone").dropzone({ url: WEBROOT+"pages/upload/1", maxFilesize: 10, dictDefaultMessage: '<div class="col-xs-12 text-center" style="padding-bottom:20px"><img src="<?php echo $this->webroot; ?>img/file.png" alt="" /></div><p class="dropzone-add-message">Arrastra aquí todos los archivos a cargar o <a  class="add-files">selecciónalos de tu computador</a></p>',
+$("#my-dropzone").dropzone({ url: WEBROOT+"pages/upload/1", maxFilesize: 10, dictDefaultMessage: '<div class="col-xs-12 text-center" style="padding-bottom:20px"><img src="<?php echo $this->webroot; ?>img/file.png" alt="" /></div><p class="dropzone-add-message">Arrastra aquí todos los archivos a cargar o <a  class="add-files">selecciónalos de tu computador</a></p>', acceptedFiles: "image/jpeg,image/png,image/gif",
 	success:function(data){
 		$('#content_imgs').append('<input type="hidden" value='+data.xhr.response+' name="data[Propierty][Upload][][name]">');
   	// console.log(data.xhr.response);
   }
 });
 
-$("#drop-xls").dropzone({ url: WEBROOT+"pages/upload/2", maxFilesize: 10, dictDefaultMessage: '<div class="col-xs-12 text-center" style="padding-bottom:20px"><img src="<?php echo $this->webroot; ?>img/file.png" alt="" /></div><p class="dropzone-add-message">Arrastra aquí todos los archivos a cargar o <a  class="add-files">selecciónalos de tu computador</a></p>',maxFiles: 1,
+$("#drop-xls").dropzone({ url: WEBROOT+"pages/upload/2", maxFilesize: 10, dictDefaultMessage: '<div class="col-xs-12 text-center" style="padding-bottom:20px"><img src="<?php echo $this->webroot; ?>img/file.png" alt="" /></div><p class="dropzone-add-message">Arrastra aquí todos los archivos a cargar o <a  class="add-files">selecciónalos de tu computador</a></p>',maxFiles: 1, acceptedFiles: ".xls",
 	success:function(data){
 		$('#content_xls').html('<input type="hidden" value='+data.xhr.response+' name="data[Propierty][xls]">');
   }
 });
 
-$("#drop-pdf").dropzone({ url: WEBROOT+"pages/upload/3", maxFilesize: 10, dictDefaultMessage: '<div class="col-xs-12 text-center" style="padding-bottom:20px"><img src="<?php echo $this->webroot; ?>img/file.png" alt="" /></div><p class="dropzone-add-message">Arrastra aquí todos los archivos a cargar o <a  class="add-files">selecciónalos de tu computador</a></p>',maxFiles: 1,
+$("#drop-pdf").dropzone({ url: WEBROOT+"pages/upload/3", maxFilesize: 10, dictDefaultMessage: '<div class="col-xs-12 text-center" style="padding-bottom:20px"><img src="<?php echo $this->webroot; ?>img/file.png" alt="" /></div><p class="dropzone-add-message">Arrastra aquí todos los archivos a cargar o <a  class="add-files">selecciónalos de tu computador</a></p>',maxFiles: 1, acceptedFiles: ".pdf",
 	success:function(data){
 		$('#content_pdf').html('<input type="hidden" value='+data.xhr.response+' name="data[Propierty][pdf]">');
   }

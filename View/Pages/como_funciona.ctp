@@ -40,7 +40,9 @@
 			<div class="titulo titulo_web">
 				<h1 id="titulo_funciona"><div class="rayita_izquierda ray_nos"></div>CÓMO FUNCIONA</h1>
 			</div>
-      <iframe style="width:100%;" height="260" src="https://www.youtube.com/embed/<?php echo $work['Work']['url']; ?>" frameborder="0" allowfullscreen></iframe>
+			<?php $id = split("https://youtu.be/",$work['Work']['url']);
+			?>
+      <iframe style="width:100%;" height="260" src="https://www.youtube.com/embed/<?php echo $id[1]; ?>" frameborder="0" allowfullscreen></iframe>
       <p class="quote">"Para invertir en bienes raíces es importante tener un <b>equipo multidisciplinario</b> que origine, administre y <b>se comunique con los inversionistas</b> adecuadamente."</p>
     </div>
   </div>
@@ -148,7 +150,7 @@
 				<div class="indicador_img_content">
 					<img src="<?php echo $this->webroot; ?>img/indicador_1.png">
 				</div>
-				
+
 				<p>La tasa interna de retorno que nos permite ver de forma anualizada el retorno de una inversión tomando en cuenta el tiempo en que se recupera el capital invertido.</p>
 			</div>
 			<div class="indicador der">

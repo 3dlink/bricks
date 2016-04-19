@@ -1,0 +1,1 @@
+<h1 style="text-align:center;">SECCIÓN ADMINISTRATIVA DE BRICKS</h1>

@@ -16,7 +16,7 @@
 			  <option value="0">Todos</option>
 			  <option value="1">Entre US$25.000 a US$50.000</option>
 			  <option value="2">Entre US$50.001 a US$100.000</option>
-			  <option value="3">Más de US$100.001</option>
+			  <option id="opt_3" value="3">Más de US$100.001</option>
 			</select>
 		</div>
 		<div class="filter_item">
@@ -32,7 +32,7 @@
 			<span><b><span style="color:#fe6500;">-</span> Ubicación</b></span>
 			<select name="ubicacion_select" class="select">
 			  <option value="0">Todos</option>
-			  <option class="bold" disabled="disabled">Estados Unidos</option>
+			  <option value="us" class="bold">Estados Unidos</option>
 			  <option value="Alabama">Alabama</option>
 				<option value="Alaska">Alaska</option>
 				<option value="Arizona">Arizona</option>
@@ -84,7 +84,7 @@
 				<option value="West Virginia">West Virginia</option>
 				<option value="Wisconsin">Wisconsin</option>
 				<option value="Wyoming">Wyoming</option>
-			  <option class="bold" disabled="disabled">México</option>
+			  <option value="mx" class="bold">México</option>
 				<option value="Aguascalientes">Aguascalientes</option>
 				<option value="Baja California">Baja California</option>
 				<option value="Baja California Sur">Baja California Sur</option>
@@ -131,28 +131,32 @@
 			<button class="bricks_search_btn" type="submit">BUSCAR</button>
 		</div>
 
-	</form>  
+	</form>
 	</div>
 
 	<div id="propierties_list">
 
 		<?php foreach ($propierties as $propierty) { ?>
 			<div id="prop_1" class="propiedad">
-				<div class="col-sm-6 propiedad_left flip">
-						<div class="flip_items">
-							<div class="box caja front">
+				<div class="col-sm-6 caja propiedad_left flip">
+						<!-- <div class=""> -->
+							<div class="flip_items">
 								<h3><?php echo $propierty['Propierty']['name']; ?> <!-- <span>DOLOR SIT.</span> --></h3>
-								<img src="<?php echo $this->webroot; ?>files/<?php echo $propierty['Upload'][0]['name']; ?>">
-								<?php if($propierty['Propierty']['status_percent']==100){ ?>
-		        			<button class="slider_btn small_btn proyecto_btn cerrada_btn" type="button">OFERTA CERRADA</button>
-		        		<?php }?>
+								<div class="img_prop box front" style="background-image:url('<?php echo $this->webroot; ?>files/<?php echo $propierty['Upload'][0]['name']; ?>');">
+									<?php if($propierty['Propierty']['status_percent']==100){ ?>
+			        			<button class="slider_btn small_btn proyecto_btn cerrada_btn" type="button">OFERTA CERRADA</button>
+			        		<?php }?>
+		        		</div>
+								<!-- <img src="<?php echo $this->webroot; ?>files/<?php echo $propierty['Upload'][0]['name']; ?>"> --><div class="box back detras_left">
+									<p><?php echo $propierty['Propierty']['info']; ?></p>
+				        	<!-- <button class="slider_btn small_btn proyecto_btn" onclick="window.location.href='<?php echo $this->webroot;?>propiedad/<?php echo $propierty['Propierty']['id']; ?>'" type="button">VER PROYECTO</button> -->
+								</div>
+								<?php if($propierty['Propierty']['status_percent']<100){ ?>
+									<button class="btn_normal" onclick="window.location.href='<?php echo $this->webroot;?>propiedad/<?php echo $propierty['Propierty']['id']; ?>'" type="button">INVIERTE YA</button>
+								<?php }?>
 							</div>
-							<div class="box caja back detras_left">
-								<h3><?php echo $propierty['Propierty']['name']; ?><!--  <span>DOLOR SIT.</span> --></h3>
-								<p><?php echo $propierty['Propierty']['info']; ?></p>
-			        	<button class="slider_btn small_btn proyecto_btn" onclick="window.location.href='<?php echo $this->webroot;?>propiedad/<?php echo $propierty['Propierty']['id']; ?>'" type="button">VER PROYECTO</button>
-							</div>
-						</div>
+
+						<!-- </div> -->
 				</div>
 				<div class="col-sm-6 right">
 
@@ -223,7 +227,7 @@
 						<div class="flip_items">
 							<div class="box caja front">
 								<div class="col-sm-6 pregunta"><img src="<?php echo $this->webroot; ?>img/torta_icon.png"></img>Status de la Oferta</div>
-								<div class="col-sm-6 respuesta" style="min-width: 150px;margin-right:0;">
+								<div class="col-sm-6 respuesta" style="min-width: 200px;margin-right:0;">
 										<div class="percent">
 											<div class="top_text">
 												<small><?php echo round($propierty['Propierty']['status_percent'],1); ?><span class="perc">%</span></small>
@@ -232,12 +236,12 @@
 											<div class="progresionBarDefault">
 												<div id="barProgress" style="width: <?php echo round($propierty['Propierty']['status_percent'],1); ?>%;"></div>
 											</div>
-											<?php 
+											<?php
 												$top = '';
 												if($propierty['Propierty']['status_top']/1000000 > 1)
-													$top = ($propierty['Propierty']['status_top']/1000000).'M';
-												elseif($propierty['Propierty']['status_top']/100000 > 1)
-													$top = ($propierty['Propierty']['status_top']/100000).'K';
+													$top = round(($propierty['Propierty']['status_top']/1000000),2).'M';
+												elseif($propierty['Propierty']['status_top']/1000 > 1)
+													$top = round(($propierty['Propierty']['status_top']/1000),2).'K';
 												else
 													$top = ($propierty['Propierty']['status_top']);
 											?>
@@ -274,5 +278,24 @@
 <script type="text/javascript">
 
 $('.diego').find('a').html('<div class="punto_pag"></div>');
+
+$('.select').change(function(event) {
+	$(this).addClass('seleccionado');
+});
+
+$(document).ready(function() {
+	if(window.location.search!=''){
+		//?price_select=1&tir_select=2&ubicacion_select=Idaho&status_select=1
+		var par = window.location.search;
+		par = par.split('?')[1];
+		par = par.split('&');
+
+		$.each(par,function(index, el) {
+			select = el.split('=')[0];
+			val = el.split('=')[1];
+			$('select[name='+select+'] option[value="' + val + '"]').attr('selected', 'selected');;
+		});
+	}
+});
 
 </script>

@@ -169,7 +169,7 @@ body{
 
 .success_message {
   position: relative;
-  overflow: hidden;	
+  overflow: hidden;
   font-family: 'Opensans';
   margin: 0.5rem 0 1rem 0;
   transition: box-shadow .25s;
@@ -320,7 +320,7 @@ body{
 	float: left;
 }
 
-.checkbox {    
+.checkbox {
 	float: left !important;
 	width: 30px !important;
   margin-top: 7px !important;
@@ -351,8 +351,8 @@ body{
 	margin: 0 60px;
 	*cursor: pointer;
 	background-image: url('../img/logo.png');
-	background-repeat: no-repeat;   
-	background-size: contain; 
+	background-repeat: no-repeat;
+	background-size: contain;
 	background-position: 50%;
 }
 
@@ -1286,7 +1286,7 @@ h2 {
 	padding: 0 118px;
 }
 
-.select { 
+.select {
 	margin-left: 5px;
 	width: 150px;
 	border: 1px solid #fe6500;
@@ -1342,9 +1342,9 @@ h3 {
 }
 
 .detras_left > p {
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
-  margin: 54px;
+  margin: 35px;
 }
 
 .proyecto_btn {
@@ -1890,7 +1890,7 @@ h5 {
 .ofrecemos_movil{
 	display: none;
 }
-	
+
 .tipo_movil{
 	display: none;
 }
@@ -1951,7 +1951,7 @@ h5 {
 }
 
 #preguntas_content {
-	width: 100%;    
+	width: 100%;
 	padding: 0 140px;
 	margin: 0 auto;
 	font-family: 'Opensans';
@@ -2122,6 +2122,54 @@ h6 {
 	font-weight: bold;
 }
 
+.seleccionado {
+	border: 2px solid rgb(169, 169, 169) !important;
+}
+
+.img_prop {
+	*float: left;
+	margin:0 auto;
+	margin-top: 60px;
+	width: 495px;
+	height: 240px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50%;
+}
+
+.propiedad_left {
+	padding: 0 30px;
+}
+
+.propiedad_left h3 {
+	margin: 20px 30px;
+}
+
+.propiedad_left .box {
+	margin:0 auto;
+	margin-top: 60px;
+	width: 90%;
+	height: 240px;
+}
+
+.propiedad_left .flip_items {
+	cursor: inherit;
+}
+
+.btn_normal {
+	background: #f47521;
+  font-family: 'Canter';
+  font-size: 26px;
+  color: white;
+  font-weight: bold;
+  width: 150px;
+  height: 40px;
+  border: none;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%,-20%);
+}
 
 
 
@@ -2176,14 +2224,7 @@ h6 {
 
 
 
-
-
-
-
-
-
-
-@media ( max-width : 1350px) { 
+@media ( max-width : 1350px) {
 
 	.filtro div {
 		margin-bottom: 20px;
@@ -2196,7 +2237,7 @@ h6 {
   }
 }
 
-@media ( max-width : 1300px) { 
+@media ( max-width : 1300px) {
 	.menu_item {
 	  margin-right: 15px;
 	}
@@ -2215,7 +2256,7 @@ h6 {
 	}
 }
 
-@media ( max-width : 1200px) { 
+@media ( max-width : 1200px) {
   .experiencia_item {
     margin-top: 30px;
   }
@@ -2229,7 +2270,7 @@ h6 {
 	}
 }
 
-@media ( max-width : 1150px) { 
+@media ( max-width : 1150px) {
 	#menu_group {
 	    width: 55%;
 	}
@@ -2246,7 +2287,7 @@ h6 {
 		float: left;
 		width: 45%;
 	}
-	
+
 	#videos_como_funciona {
 		margin: 0;
 		padding: 0;
@@ -2259,7 +2300,7 @@ h6 {
   }
 }
 
-@media ( max-width : 1100px) { 
+@media ( max-width : 1100px) {
 	.project_type .front {
     padding-top: 40px;
   }
@@ -2281,7 +2322,7 @@ h6 {
 
 }
 
-@media ( max-width : 1050px) { 
+@media ( max-width : 1050px) {
 	#content_nosotros {
     padding: 0 80px;
 	}
@@ -2523,14 +2564,14 @@ h6 {
 	}
 }
 
-@media ( max-width : 950px) { 
+@media ( max-width : 950px) {
 	#experiencia_extract br {
 		display: none;
 	}
 }
 
 
-@media ( max-width : 900px) { 
+@media ( max-width : 900px) {
 	.menu_item {
 	  display: none;
 	}
@@ -2552,7 +2593,7 @@ h6 {
 	#titulo_funciona {
     width: 23vw;
 	}
-	
+
 	#funciona_content {
     padding: 0 50px;
 	}
@@ -2609,7 +2650,7 @@ h6 {
 
 	#experiencia_home #titulo_experiencia {
 	  width: 20vw;
-	} 
+	}
 	#logo_quienessomos {
     width: 100%;
     float: left;
@@ -2628,7 +2669,7 @@ h6 {
 	}
 }
 
-@media ( max-width : 850px) { 
+@media ( max-width : 850px) {
 	#experiencia_extract {
 		font-size: 4vw;
 	}
@@ -2652,7 +2693,7 @@ h6 {
   }
 }
 
-@media ( max-width : 800px) { 
+@media ( max-width : 800px) {
 	#frases {
     width: 130%;
     margin-left: -70px;
@@ -2678,7 +2719,7 @@ h6 {
 
 	h1{
 		font-size: 5vw;
-	}	
+	}
 
 	#contactanos {
     background-size: cover;
@@ -2730,7 +2771,7 @@ h6 {
 		float: none !important;
 		margin: 30px auto;
 	}
-	
+
 	#titulo_filosofia {
     width: 15vw;
 	}
@@ -2738,7 +2779,7 @@ h6 {
 	#equipo > p {
     width: 100%;
   }
-  
+
   #titulo_oportunidad {
     width: 21vw;
 	}
@@ -2760,7 +2801,7 @@ h6 {
 	#texto_como_funciona .rayita_derecha{
 		display: none;
 	}
-	
+
 	#videos_como_funciona {
 		float: left;
 		width: 100%;
@@ -2813,14 +2854,14 @@ h6 {
 	}
 }
 
-@media ( max-width : 670px) { 
+@media ( max-width : 670px) {
 	#preguntas_content {
 		width: 100%;
 		padding: 0 30px;
 	}
 }
 
-@media ( max-width : 650px) { 
+@media ( max-width : 650px) {
 	.experiencia_item {
 		float: none !important;
 		margin: 50px auto;
@@ -2871,7 +2912,7 @@ h6 {
 	.register_btn {
     font-size: 22px;
   }
-	
+
 	#funciona_content {
     padding: 0 20px;
 	}
@@ -2901,7 +2942,7 @@ h6 {
 	}
 }
 
-@media ( max-width : 550px) { 
+@media ( max-width : 550px) {
 	.fixed {
     height: 88px;
 	}
@@ -2916,7 +2957,7 @@ h6 {
 
 
 @media ( max-width : 500px) {
-	
+
 	.filtro div {
 		margin-right: 0px;
 		width: 100%;
@@ -2961,11 +3002,11 @@ h6 {
 	}
 
 	.indicador {
-	  height: initial; 
+	  height: initial;
 	}
 }
 
-@media ( max-width : 450px) { 
+@media ( max-width : 450px) {
 	#fondo_home {
     padding: 0 20px;
 	}
@@ -3012,7 +3053,7 @@ h6 {
 }
 }
 
-@media ( max-width : 300px) { 
+@media ( max-width : 300px) {
 	.fixed {
     height: 120px;
 	}

@@ -26,8 +26,7 @@ class StartController extends AppController {
 		return json_encode(1);
 	}
 
-
-	function __enviar_correo($from, $to, $subject, $contenido){		
+	function __enviar_correo($from, $to, $subject, $contenido){
 		$Email = new CakeEmail();
 		$Email->config('_temp')
 		->to($to)
@@ -37,13 +36,13 @@ class StartController extends AppController {
 		->emailFormat('html')
 		->send($contenido);
 	}
-	
+
 	function __armar_contenido($name, $email, $observation){
-	
+
 		$nombre = $name;
-	
+
 		$observaciones = $observation;
-	
+
 		$content = "<table width='100%'>
 		<tr>
 		<td style='text-align: left; color: black; width: 60%;'>
@@ -54,7 +53,7 @@ class StartController extends AppController {
 		<td style='text-align: left; color: black; width: 60%;'>
 		<b>Datos de contacto:</b><br>
 		Nombre : $nombre<br>
-	
+
 		Correo: $email<br>
 		Problema: $observaciones <br>
 		</td>
@@ -66,9 +65,9 @@ class StartController extends AppController {
 		<tr style='height: 20px;'></tr>
 		<tr style='height: 50px;'></tr>
 		</table>";
-	
+
 		return $content;
-	
+
 	}
 
 
