@@ -65,17 +65,17 @@
  *
  * @see ErrorHandler for more information on exception handling and configuration.
  */
-	// Configure::write('Exception', array(
-	// 	'handler' => 'ErrorHandler::handleException',
-	// 	'renderer' => 'ExceptionRenderer',
-	// 	'log' => true
-	// ));
-
 	Configure::write('Exception', array(
-    'handler' => 'SeoExceptionHandler::handle',
-    'renderer' => 'ExceptionRenderer',
-    'log' => true
+		'handler' => 'ErrorHandler::handleException',
+		'renderer' => 'ExceptionRenderer',
+		'log' => true
 	));
+
+	// Configure::write('Exception', array(
+ //    'handler' => 'SeoExceptionHandler::handle',
+ //    'renderer' => 'ExceptionRenderer',
+ //    'log' => true
+	// ));
 
 /**
  * Application wide charset encoding
@@ -344,7 +344,7 @@ if (Configure::read('debug') > 0) {
 }
 
 // Prefix each application on the same server with a different string, to avoid Memcache and APC conflicts.
-$prefix = 'fertinitro_';
+$prefix = 'bricks_';
 
 /**
  * Configure the cache used for general framework caching. Path information,

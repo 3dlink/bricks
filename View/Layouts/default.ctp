@@ -41,9 +41,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->fetch('css');
 		echo $this->fetch('script');
 	?>
-  <?php echo $this->Seo->metaTags(); ?>
-  <?php echo $this->Seo->title($title_for_layout); ?>
-  <?php echo $this->Seo->canonical(); ?>
 	<script type="text/javascript">var WEBROOT='<?php echo $this->webroot; ?>';</script>
 	<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -56,6 +53,17 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
  
 	</script>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=0.6, user-scalable=no">
+	<meta name="description" content="<?php echo $seodescription['Seodescription']['description']; ?>">
+	<meta name="robots" content="index,follow">
+	<meta name="title" content="Bricks">
+	<link rel="canonical" href="http://www.bricksusa.com">
+	<meta name="keywords" content="Bricks, Real Estate, crowdfunding, bricksusa, Inversiones">
+	<meta property="og:url" content="http://www.bricksusa.com">
+	<meta property="og:site_name" content="Bricks">
+	<meta property="og:title" content="Bricks">
+	<?php foreach ($keywords as $key => $value) { ?>
+		<meta property="article:tag" content="<?php echo $value['Seokeyword']['keyword']; ?>">
+	<?php } ?>
 </head>
 <body onload="PropertiesMap()">
   <?php $user = $this->UserAuth->getUser(); ?>

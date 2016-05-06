@@ -16,7 +16,7 @@ class PropiertiesController extends AppController {
  * @var array
  */
 	public $components = array('Paginator', 'Session');
-	public $uses = array('Propierty','Upload');
+	public $uses = array('Propierty','Upload','Seodescription','Seokeyword');
 /**
  * index method
  *
@@ -37,6 +37,14 @@ class PropiertiesController extends AppController {
  */
 
 	public function view($id = null) {
+		$this->set('seodescription',$this->Seodescription->find('first'));
+		$keyword = $this->Seokeyword->find('all');
+		// $keyword = "";
+		// foreach ($keywords as $key => $value) {
+		// 	$keyword = $keyword.$value['Seokeyword']['keyword'].",";
+		// }
+		// $keyword = substr($keyword, 0,-1);  
+		$this->set('keywords',$keyword);
 		if (!$this->Propierty->exists($id) && $id!=1) {
 			throw new NotFoundException(__('Invalid propierty'));
 		}
@@ -179,7 +187,15 @@ class PropiertiesController extends AppController {
 		return $this->redirect(array('action' => 'index'));
 	}
 
-	public function all(){
+	public function all(){		
+		$this->set('seodescription',$this->Seodescription->find('first'));
+		$keyword = $this->Seokeyword->find('all');
+		// $keyword = "";
+		// foreach ($keywords as $key => $value) {
+		// 	$keyword = $keyword.$value['Seokeyword']['keyword'].",";
+		// }
+		// $keyword = substr($keyword, 0,-1);  
+		$this->set('keywords',$keyword);
 		$conditions = array();
 		if(isset($this->request->query['price_select'])){
 

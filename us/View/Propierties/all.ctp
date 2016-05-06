@@ -131,7 +131,7 @@
 			<button class="bricks_search_btn" type="submit">BUSCAR</button>
 		</div>
 
-	</form>  
+	</form>
 	</div>
 
 	<div id="propierties_list">
@@ -151,9 +151,11 @@
 									<p><?php echo $propierty['Propierty']['info']; ?></p>
 				        	<!-- <button class="slider_btn small_btn proyecto_btn" onclick="window.location.href='<?php echo $this->webroot;?>propiedad/<?php echo $propierty['Propierty']['id']; ?>'" type="button">VER PROYECTO</button> -->
 								</div>
-								<button class="btn_normal" onclick="window.location.href='<?php echo $this->webroot;?>propiedad/<?php echo $propierty['Propierty']['id']; ?>'" type="button">INVIERTE YA</button>
+								<?php if($propierty['Propierty']['status_percent']<100){ ?>
+									<button class="btn_normal" onclick="window.location.href='<?php echo $this->webroot;?>propiedad/<?php echo $propierty['Propierty']['id']; ?>'" type="button">INVIERTE YA</button>
+								<?php }?>
 							</div>
-							
+
 						<!-- </div> -->
 				</div>
 				<div class="col-sm-6 right">
@@ -225,7 +227,7 @@
 						<div class="flip_items">
 							<div class="box caja front">
 								<div class="col-sm-6 pregunta"><img src="<?php echo $this->webroot; ?>img/torta_icon.png"></img>Status de la Oferta</div>
-								<div class="col-sm-6 respuesta" style="min-width: 150px;margin-right:0;">
+								<div class="col-sm-6 respuesta" style="min-width: 200px;margin-right:0;">
 										<div class="percent">
 											<div class="top_text">
 												<small><?php echo round($propierty['Propierty']['status_percent'],1); ?><span class="perc">%</span></small>
@@ -234,12 +236,12 @@
 											<div class="progresionBarDefault">
 												<div id="barProgress" style="width: <?php echo round($propierty['Propierty']['status_percent'],1); ?>%;"></div>
 											</div>
-											<?php 
+											<?php
 												$top = '';
 												if($propierty['Propierty']['status_top']/1000000 > 1)
 													$top = round(($propierty['Propierty']['status_top']/1000000),2).'M';
-												elseif($propierty['Propierty']['status_top']/100000 > 1)
-													$top = round(($propierty['Propierty']['status_top']/100000),2).'K';
+												elseif($propierty['Propierty']['status_top']/1000 > 1)
+													$top = round(($propierty['Propierty']['status_top']/1000),2).'K';
 												else
 													$top = ($propierty['Propierty']['status_top']);
 											?>

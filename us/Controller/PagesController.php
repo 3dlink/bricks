@@ -35,7 +35,7 @@ class PagesController extends AppController {
  *
  * @var array
  */
-	public $uses = array('Home','Testimonio','Equipo','Faq','Work','Video');
+	public $uses = array('Home','Testimonio','Equipo','Faq','Work','Video','Seodescription','Seokeyword');
 
 /**
  * Displays a view
@@ -67,6 +67,14 @@ class PagesController extends AppController {
 		$this->set('slider_ppal',$this->Home->find('all'));
 		$this->set('testimonios',$this->Testimonio->find('all'));
 		$this->set('videos',$this->Video->find('all'));
+		$this->set('seodescription',$this->Seodescription->find('first'));
+		$keyword = $this->Seokeyword->find('all');
+		// $keyword = "";
+		// foreach ($keywords as $key => $value) {
+		// 	$keyword = $keyword.$value['Seokeyword']['keyword'].",";
+		// }
+		// $keyword = substr($keyword, 0,-1);  
+		$this->set('keywords',$keyword);
 
 		try {
 			$this->render(implode('/', $path));
@@ -80,18 +88,54 @@ class PagesController extends AppController {
 
 
 	public function nosotros(){
+		$this->set('seodescription',$this->Seodescription->find('first'));
+		$keywords = $this->Seokeyword->find('all');
+		// $keyword = "";
+		// foreach ($keywords as $key => $value) {
+		// 	$keyword = $keyword.$value['Seokeyword']['keyword'].",";
+		// }
+		// $keyword = substr($keyword, 0,-1);  
+		$this->set('keywords',$keywords);
+
 		$this->set('equipos',$this->Equipo->find('all'));
 	}
 
 	public function contacto(){
+		$this->set('seodescription',$this->Seodescription->find('first'));
+		$keywords = $this->Seokeyword->find('all');
+		// $keyword = "";
+		// foreach ($keywords as $key => $value) {
+		// 	$keyword = $keyword.$value['Seokeyword']['keyword'].",";
+		// }
+		// $keyword = substr($keyword, 0,-1);  
+		$this->set('keywords',$keywords);
+
 		
 	}
 
 	public function como_funciona(){
+		$this->set('seodescription',$this->Seodescription->find('first'));
+		$keywords = $this->Seokeyword->find('all');
+		// $keyword = "";
+		// foreach ($keywords as $key => $value) {
+		// 	$keyword = $keyword.$value['Seokeyword']['keyword'].",";
+		// }
+		// $keyword = substr($keyword, 0,-1);  
+		$this->set('keywords',$keywords);
+
 		$this->set('work',$this->Work->find('first'));
 	}
 
 	public function preguntas_frecuentes(){
+		$this->set('seodescription',$this->Seodescription->find('first'));
+		$keywords = $this->Seokeyword->find('all');
+		// $keyword = "";
+		// foreach ($keywords as $key => $value) {
+		// 	$keyword = $keyword.$value['Seokeyword']['keyword'].",";
+		// }
+		// $keyword = substr($keyword, 0,-1);  
+		$this->set('keywords',$keywords);
+
 		$this->set('faqs',$this->Faq->find('all'));
 	}
 

@@ -26,7 +26,7 @@ class UsersController extends UserMgmtAppController {
 	 *
 	 * @var array
 	 */
-	public $uses = array('Usermgmt.User', 'Usermgmt.UserGroup', 'Usermgmt.LoginToken');
+	public $uses = array('Usermgmt.User', 'Usermgmt.UserGroup', 'Usermgmt.LoginToken','Seodescription','Seokeyword');
 	public $components = array('Paginator');
 	/**
 	 * Called before the controller action.  You can use this method to configure and customize components
@@ -117,6 +117,14 @@ class UsersController extends UserMgmtAppController {
 	 * @return void
 	 */
 	public function login() {
+		$this->set('seodescription',$this->Seodescription->find('first'));
+		$keyword = $this->Seokeyword->find('all');
+		// $keyword = "";
+		// foreach ($keywords as $key => $value) {
+		// 	$keyword = $keyword.$value['Seokeyword']['keyword'].",";
+		// }
+		// $keyword = substr($keyword, 0,-1);  
+		$this->set('keywords',$keyword);
 		if ($this->request -> isPost()) {
 			 $this->User->set($this->data);
 			 if($this->User->LoginValidate()) {
@@ -196,6 +204,14 @@ class UsersController extends UserMgmtAppController {
 	 * @return void
 	 */
 	public function register() {
+		$this->set('seodescription',$this->Seodescription->find('first'));
+		$keyword = $this->Seokeyword->find('all');
+		// $keyword = "";
+		// foreach ($keywords as $key => $value) {
+		// 	$keyword = $keyword.$value['Seokeyword']['keyword'].",";
+		// }
+		// $keyword = substr($keyword, 0,-1);  
+		$this->set('keywords',$keyword);
 		$userId = $this->UserAuth->getUserId();
 		if ($userId) {
 			$this->redirect("/dashboard");

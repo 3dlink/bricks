@@ -73,8 +73,8 @@
 
 				<div class="col-md-6">
 	        <div class="form-group">
-	          <label>Información adicional</label>
-	          <?php echo $this->Form->input('info',array('div'=>false, 'required'=>true,'label'=>false,'class'=>'form-control','type'=>'textarea')); ?>
+	          <label>Información adicional - Max. 300 caracteres</label>
+	          <?php echo $this->Form->input('info',array('div'=>false,'required'=>true,'maxlength'=>300,'label'=>false,'class'=>'form-control','type'=>'textarea')); ?>
 	        </div>
 	      </div>
 
@@ -227,8 +227,8 @@
             Guardar
           </button>
         </div>
-      </div>          
-    </fieldset>  
+      </div>
+    </fieldset>
 </article>
 
 

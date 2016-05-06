@@ -16,7 +16,7 @@ header('Content-Type: text/html; charset=utf-8');
 // Setup a 'default' cache configuration for use in the application.
 Cache::config('default', array('engine' => 'File'));
 
-require_once(APP . 'Plugin' . DS . 'Seo' . DS . 'Lib' . DS . 'Error' . DS . 'SeoAppError.php');
+// require_once(APP . 'Plugin' . DS . 'Seo' . DS . 'Lib' . DS . 'Error' . DS . 'SeoAppError.php');
 
 /**
  * The settings below can be used to set additional paths to models, views and controllers.

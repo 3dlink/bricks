@@ -86,13 +86,15 @@
         </div>
     </div>
     <div id="videos_como_funciona" class="col-md-6">
-      <iframe id="video_grande" style="width:100%;" height="260" src="https://www.youtube.com/embed/<?php echo $videos[0]['Video']['video']; ?>" frameborder="0" allowfullscreen></iframe>
+      <?php $id = split("https://youtu.be/",$videos[0]['Video']['video']);?>
+      <iframe id="video_grande" style="width:100%;" height="260" src="https://www.youtube.com/embed/<?php echo $id[1]; ?>" frameborder="0" allowfullscreen></iframe>
       
       <div class="view-with-margin-v">
         <div id="owl-demo-v" class="owl-carousel">
           <?php foreach ($videos as $video) { ?>
             <div class="item item_videos">
-              <img video="https://www.youtube.com/embed/<?php echo $video['Video']['video']; ?>" src="https://img.youtube.com/vi/<?php echo $video['Video']['video']; ?>/1.jpg">
+              <?php $id = split("https://youtu.be/",$video['Video']['video']);?>
+              <img video="https://www.youtube.com/embed/<?php echo $id[1]; ?>" src="https://img.youtube.com/vi/<?php echo $id[1]; ?>/1.jpg">
             </div>
           <?php } ?>
         </div>

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50614
 File Encoding         : 65001
 
-Date: 2016-04-19 00:25:04
+Date: 2016-05-06 09:14:44
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -135,117 +135,36 @@ INSERT INTO `propierties` VALUES ('19', 'Propiedad de prueba 2', '123', '123', '
 INSERT INTO `propierties` VALUES ('20', 'Propiedad de prueba 3', '12', '6', '6', '50', '10000000', 'info adicional', '12', null, null, '2016-03-15 16:19:04', '2016-04-06 03:08:05', 'San Luis PotosÃ­', '12000000', '5000000');
 
 -- ----------------------------
--- Table structure for seo_blacklists
+-- Table structure for seodescriptions
 -- ----------------------------
-DROP TABLE IF EXISTS `seo_blacklists`;
-CREATE TABLE `seo_blacklists` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `ip_range_start` bigint(20) unsigned NOT NULL,
-  `ip_range_end` bigint(20) unsigned NOT NULL,
-  `note` text,
-  `is_active` tinyint(1) NOT NULL DEFAULT '1',
-  `created` datetime DEFAULT NULL,
-  `modified` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `ip_range_start` (`ip_range_start`),
-  KEY `ip_range_end` (`ip_range_end`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of seo_blacklists
--- ----------------------------
-
--- ----------------------------
--- Table structure for seo_honeypot_visits
--- ----------------------------
-DROP TABLE IF EXISTS `seo_honeypot_visits`;
-CREATE TABLE `seo_honeypot_visits` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `ip` bigint(20) unsigned NOT NULL,
-  `created` datetime DEFAULT NULL,
+DROP TABLE IF EXISTS `seodescriptions`;
+CREATE TABLE `seodescriptions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `description` text,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of seo_honeypot_visits
+-- Records of seodescriptions
 -- ----------------------------
+INSERT INTO `seodescriptions` VALUES ('1', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare, libero et feugiat ullamcorper, lectus odio rhoncus nibh, vel sollicitudin purus libero eget velit. Sed tempor turpis vitae urna mattis accumsan. d');
 
 -- ----------------------------
--- Table structure for seo_meta_tags
+-- Table structure for seokeywords
 -- ----------------------------
-DROP TABLE IF EXISTS `seo_meta_tags`;
-CREATE TABLE `seo_meta_tags` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `seo_uri_id` int(11) NOT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `content` varchar(255) DEFAULT NULL,
-  `is_http_equiv` tinyint(1) NOT NULL DEFAULT '0',
-  `created` datetime DEFAULT NULL,
-  `modified` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `seo_uri_id` (`seo_uri_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+DROP TABLE IF EXISTS `seokeywords`;
+CREATE TABLE `seokeywords` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `keyword` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of seo_meta_tags
+-- Records of seokeywords
 -- ----------------------------
-
--- ----------------------------
--- Table structure for seo_redirects
--- ----------------------------
-DROP TABLE IF EXISTS `seo_redirects`;
-CREATE TABLE `seo_redirects` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `seo_uri_id` int(11) NOT NULL,
-  `redirect` varchar(255) DEFAULT NULL,
-  `priority` int(11) NOT NULL DEFAULT '100',
-  `is_active` tinyint(1) NOT NULL DEFAULT '1',
-  `callback` varchar(255) DEFAULT NULL,
-  `created` datetime DEFAULT NULL,
-  `modified` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `seo_uri_id` (`seo_uri_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of seo_redirects
--- ----------------------------
-
--- ----------------------------
--- Table structure for seo_titles
--- ----------------------------
-DROP TABLE IF EXISTS `seo_titles`;
-CREATE TABLE `seo_titles` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `seo_uri_id` int(11) unsigned NOT NULL,
-  `title` varchar(255) NOT NULL,
-  `created` datetime DEFAULT NULL,
-  `modified` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `seo_uri_id` (`seo_uri_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of seo_titles
--- ----------------------------
-
--- ----------------------------
--- Table structure for seo_uris
--- ----------------------------
-DROP TABLE IF EXISTS `seo_uris`;
-CREATE TABLE `seo_uris` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `uri` varchar(255) DEFAULT NULL,
-  `is_approved` tinyint(1) NOT NULL DEFAULT '1',
-  `created` datetime DEFAULT NULL,
-  `modified` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `uri` (`uri`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of seo_uris
--- ----------------------------
+INSERT INTO `seokeywords` VALUES ('2', 'diego');
+INSERT INTO `seokeywords` VALUES ('3', 'brito');
+INSERT INTO `seokeywords` VALUES ('4', 'eduardo');
 
 -- ----------------------------
 -- Table structure for testimonios
@@ -523,7 +442,7 @@ CREATE TABLE `videos` (
 -- ----------------------------
 -- Records of videos
 -- ----------------------------
-INSERT INTO `videos` VALUES ('2', 'Video Principal', 'KYbquzOgp7A');
+INSERT INTO `videos` VALUES ('2', 'Video Principal', 'https://youtu.be/BSOjHjfLu3I');
 INSERT INTO `videos` VALUES ('3', 'musica', '-ZZCuMzuTY8');
 INSERT INTO `videos` VALUES ('4', 'te soÃ±e', 'fDXYmW217bM');
 INSERT INTO `videos` VALUES ('5', 'can', '8SWnndN6drE');
