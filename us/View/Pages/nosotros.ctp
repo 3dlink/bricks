@@ -4,12 +4,12 @@
 
 		<div id="menu_nosotros">
 			<div id="menu_group">
-				<div onclick="scroll('quienes_somos');" class="menu_item menu_item_nosotros">QUIÉNES SOMOS</div>
-				<div onclick="scroll('filosofia');" class="menu_item menu_item_nosotros">FILOSOFÍA</div>
-				<div onclick="scroll('equipo');" class="menu_item menu_item_nosotros">NUESTRO EQUIPO</div>
-				<div onclick="scroll('experiencia');" class="menu_item menu_item_nosotros">EXPERIENCIA</div>
-				<div onclick="scroll('asociados');" class="menu_item menu_item_nosotros">ASOCIADOS</div>
-				<div onclick="scroll('oportunidad');" class="menu_item menu_item_nosotros ultimo">OPORTUNIDAD</div>
+				<div onclick="scroll('quienes_somos');" class="menu_item menu_item_nosotros">ABOUT US</div>
+				<div onclick="scroll('filosofia');" class="menu_item menu_item_nosotros">PHILOSOPHY</div>
+				<div onclick="scroll('equipo');" class="menu_item menu_item_nosotros">OUR TEAM</div>
+				<div onclick="scroll('experiencia');" class="menu_item menu_item_nosotros">EXPERIENCE</div>
+				<div onclick="scroll('asociados');" class="menu_item menu_item_nosotros">ASSOCIATES</div>
+				<div onclick="scroll('oportunidad');" class="menu_item menu_item_nosotros ultimo">OPPORTUNITY</div>
 			</div>
 		</div>
 
@@ -20,7 +20,7 @@
   <div id="somos_texto">
     <img src="<?php echo $this->webroot; ?>img/logo_negro_2.png">
       <p>
-        Para invertir en bienes raíces es importante tener un equipo multidisciplinario que origine, administre y se comunique con los inversionistas adecuadamente.
+        To invest in real estate is important to have a multidisciplinary team that originate, manage and communicate Investor properly.
       </p>
     </div>
 </section>
@@ -30,13 +30,13 @@
 <section id="filosofia">
 	
 	<div class="titulo">
-		<h1 id="titulo_filosofia"><div class="rayita_izquierda ray_nos"></div>FILOSOFÍA</h1>
+		<h1 id="titulo_filosofia"><div class="rayita_izquierda ray_nos"></div>PHILOSOPHY</h1>
 	</div>
 	<div class="row">
 		<div class="cont_filosofia">
 			<div class="filosofia_item">
 				<img class="icon_filosofia" src="<?php echo $this->webroot; ?>img/filosofia_money.png">
-				<p>Bricks es un concepto desarrollado por  profesionales del área inmobiliaria para democratizar el acceso a inversionistas; que antes no tenían capacidad  por el monto de la inversión a este tipo de activos, teniendo rendimientos y proyectos que solo tienen acceso inversionistas institucionales.</p>
+				<p>Bricks is a concept developed by real estate professionals to democratize access to investors that previously had no capacity because of the amount of investment required, in this asset class, taking yields and projects which only institutional investors had access.</p>
 				<img class="suspensivos" src="<?php echo $this->webroot; ?>img/suspensivos.jpg">
 			</div>
 		</div>
@@ -45,10 +45,10 @@
 		<div class="cont_filosofia_2">
 			<div class="filosofia_item" style="float:left;">
 				<img class="icon_filosofia" src="<?php echo $this->webroot; ?>img/filosofia_book.png">
-				<p>Bricks cuenta con un protocolo muy específico de originación de proyectos de inversión, usando tecnología de clase mundial como el software ARGUS para la evaluación de proyectos y un comité de inversiones que analiza las oportunidades para la adecuada selección de las mismas.</p>
+				<p>Bricks has a very specific origination investment projects protocol using ARGUS, a world-class technology software for evaluation of projects and an investments committee that analyzes the opportunities for proper selection.</p>
 				<img class="suspensivos" src="<?php echo $this->webroot; ?>img/suspensivos.jpg"></div>
 			<div class="filosofia_item" style="float:right;">
-				<img class="icon_filosofia" src="<?php echo $this->webroot; ?>img/filosofia_graph.png"><p>Para invertir en bienes raíces es importante tener un equipo multidisciplinario que origine, administre y se comunique con los inversionistas adecuadamente.</p>				
+				<img class="icon_filosofia" src="<?php echo $this->webroot; ?>img/filosofia_graph.png"><p>To invest in real estate is important to have a multidisciplinary team that originate, manage and communicate Investor properly.</p>				
         <img class="suspensivos" src="<?php echo $this->webroot; ?>img/suspensivos.jpg"></div>
 		</div>
 		</div>
@@ -57,9 +57,9 @@
 <section id="equipo">
 	
 	<div class="titulo">
-		<h1 id="titulo_equipo"><div class="rayita_izquierda ray_nos"></div>NUESTRO EQUIPO</h1>
+		<h1 id="titulo_equipo"><div class="rayita_izquierda ray_nos"></div>OUR TEAM</h1>
 	</div>
-	<p>Nuestro equipo está conformado por expertos provenientes de diversos ámbitos profesionales, tales como bienes raíces, tecnología, finanzas, mercadeo y arquitectura, entre otros.</p>
+	<p>Our team it's made up of experts from various professionals such as real estate, technology, finance, marketing and architecture, among other areas.</p>
 
 	
 <div class="wrapper-with-margin">
@@ -86,23 +86,23 @@
 <section id="experiencia">
       
 	<div class="titulo">
-		<h1 id="titulo_experiencia"><div class="rayita_izquierda ray_nos"></div>EXPERIENCIA</h1>
+		<h1 id="titulo_experiencia"><div class="rayita_izquierda ray_nos"></div>EXPERIENCE</h1>
 	</div>
     <div class="experiencia_content">
       <div class="experiencia_item impar first">
         <p class="nums" id="money_item">25.000</p>
         <img src="<?php echo $this->webroot; ?>img/item4.png"></img>
-        <p>US$ como el monto mínimo de inversión.</p>
+        <p>US$ as the minimum investment amount.</p>
       </div>
       <div class="experiencia_item par">
         <p class="nums" id="team_item">60</p>
         <img src="<?php echo $this->webroot; ?>img/item3.png">
-        <p>Años de experiencia combinada.</p>
+        <p>years of combined experience.</p>
       </div>
       <div class="experiencia_item impar last">
         <p class="nums" id="graph_item">9%</p>
         <img src="<?php echo $this->webroot; ?>img/item2.png">
-        <p>Tasa Interna de Retorno (TIR) promedio..</p>
+        <p>internal rate of return average.</p>
       </div>
     </div>
     <!-- <div class="experiencia_item impar first">
@@ -127,11 +127,11 @@
     </div> -->
 
     <div id="experiencia_extract">
-      Bricks ofrece <b style="color:#d9882f;">inversiones patrimoniales en inmuebles comerciales, enfocado a pequeños inversionistas que no tienen acceso a las inversiones ofrecidas solo para grandes inversionistas</b> a través de un proceso de selección de inversiones de tipo institucional.
+      Bricks offers  <b style="color:#d9882f;">equity investments in commercial real estate, focused on small investors who don´t have access to investments offered only to large investors through a selection process of institutional investment type
     </div>
 
     <p class="experiencia_parrafo">
-    	Bricks Asset Management LLC está formado por un equipo multidisciplinario con más de 50 años de experiencia combinada en desarrollos de bienes raíces en México y Estados Unidos. Nuestra empresa nace de la necesidad de los inversionistas de tener un portafolio de bienes raíces de primera calidad, bien administrado y que genere un auténtico valor a su patrimonio
+    	Bricks Asset Management LLC is formed by a multidisciplinary team with over 50 years of combined experience in real estate development in Mexico and the United States. Our company was born from the need of investors to have a high quality real estate portfolio, well managed and that generates real value to its heritage.
     </p>
 
 </section>
@@ -146,14 +146,14 @@
 
 <section id="oportunidad">
 	<div class="titulo">
-		<h1 id="titulo_oportunidad"><div class="rayita_izquierda ray_nos"></div>OPORTUNIDAD</h1>
+		<h1 id="titulo_oportunidad"><div class="rayita_izquierda ray_nos"></div>OPPORTUNITY</h1>
 	</div>
 	
 	
-	<p><b id="buscamos">BUSCAMOS BROKERS INMOBILIARIOS</b><br>
-		Para las mejores inversiones de rentas en Estados Unidos.
+	<p><b id="buscamos">WE ARE LOOKING FOR REAL ESTATE BROKERS</b><br>
+		For the best investment income in the United States.
 	</p>
-  <button class="bricks_btn small_btn_blue" onclick="window.location.href='<?php echo $this->webroot;?>contacto'" type="button">Contáctanos</button>
+  <button class="bricks_btn small_btn_blue" onclick="window.location.href='<?php echo $this->webroot;?>contacto'" type="button">Contact Us</button>
 </section>	
 
 <script type="text/javascript">

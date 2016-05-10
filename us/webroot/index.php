@@ -58,7 +58,7 @@ if (!defined('APP_DIR')) {
  * /lib/Cake/Console/Templates/skel/webroot/index.php
  */
 //define('CAKE_CORE_INCLUDE_PATH', ROOT . DS . 'lib');
-define('CAKE_CORE_INCLUDE_PATH', ROOT . DS . 'bricks' .DS . 'cakephp'. DS . 'lib');
+define('CAKE_CORE_INCLUDE_PATH', ROOT .DS . 'cakephp'. DS . 'lib');
 
 /**
  * This auto-detects CakePHP as a composer installed library.

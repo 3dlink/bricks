@@ -19,12 +19,12 @@
 			<div class="propiedad_list flip">
 				<div class="flip_items">
 					<div class="box caja front">
-						<div class="col-sm-6 pregunta"><img src="<?php echo $this->webroot; ?>img/calendario_icon.png"></img>Período de tenencia estimado</div>
-						<div class="col-sm-6 respuesta"><?php echo $propierty['Propierty']['tenencia']; ?> Años</div>
+						<div class="col-sm-6 pregunta"><img src="<?php echo $this->webroot; ?>img/calendario_icon.png"></img>Estimated holding period</div>
+						<div class="col-sm-6 respuesta"><?php echo $propierty['Propierty']['tenencia']; ?> Years</div>
 					</div>
 					<div class="box caja back detras_list">
-						<div class="col-sm-6 bottom_pregunta">Período de tendencia estimado</div>
-						<div class="col-sm-6 bottom_respuesta pequenha">Tiempo estimado hasta la venta de la propiedad</div>
+						<div class="col-sm-6 bottom_pregunta">Estimated holding period</div>
+						<div class="col-sm-6 bottom_respuesta pequenha">Estimated time until the property sale</div>
 					</div>
 				</div>
 			</div>
@@ -32,12 +32,12 @@
 			<div class="propiedad_list flip">
 				<div class="flip_items">
 					<div class="box caja front">
-						<div class="col-sm-6 pregunta"><img src="<?php echo $this->webroot; ?>img/percent_icon.png"></img>Retorno Cash to Cash</div>
+						<div class="col-sm-6 pregunta"><img src="<?php echo $this->webroot; ?>img/percent_icon.png"></img>Cash on cash return</div>
 						<div class="col-sm-6 respuesta"><?php echo $propierty['Propierty']['retorno_cash']; ?><span class="perc">%</span></div>
 					</div>
 					<div class="box caja back detras_list">
-						<div class="col-sm-6 bottom_pregunta">Retorno Cash to Cash</div>
-						<div class="col-sm-6 bottom_respuesta" style="padding: 0px 0px;font-size: 11px;">Es el retorno que recibe el inversionista por concepto de pago de rentas, tomando el promedio de los ingresos  por concepto de rentas del contrato en el plazo que se llevara la inversión</div>
+						<div class="col-sm-6 bottom_pregunta">Cash on cash return</div>
+						<div class="col-sm-6 bottom_respuesta" style="padding: 0px 0px;font-size: 11px;">It´s the return that the investor receives as a payment of rents, taking the average income rents contract within the investment will take.</div>
 					</div>
 				</div>
 			</div>
@@ -45,19 +45,20 @@
 			<div class="propiedad_list flip">
 				<div class="flip_items">
 					<div class="box caja front">
-						<div class="col-sm-6 pregunta"><img src="<?php echo $this->webroot; ?>img/percent_icon.png"></img>TIR Proyectada</div>
+						<div class="col-sm-6 pregunta"><img src="<?php echo $this->webroot; ?>img/percent_icon.png"></img>Projected IRR
+						</div>
 						<div class="col-sm-6 respuesta"><?php echo $propierty['Propierty']['tir']; ?><span class="perc">%</span>
 						</div>
 							<div class="ver_video">
-								<img src="<?php echo $this->webroot; ?>img/video_icon.png"> Ver Video
+								<img src="<?php echo $this->webroot; ?>img/video_icon.png"> Watch Video
 							</div>
 					</div>
 					<div class="box caja back detras_list">
-						<div class="col-sm-6 bottom_pregunta">TIR Proyectada</div>
-						<div class="col-sm-6 bottom_respuesta" style="padding: 0px 0px;font-size: 11px;">La tasa interna de retorno que nos permite ver de forma anualizada el retorno de una inversión tomando en cuenta el tiempo en que se recupera el capital invertido
+						<div class="col-sm-6 bottom_pregunta">Projected IRR</div>
+						<div class="col-sm-6 bottom_respuesta" style="padding: 0px 0px;font-size: 11px;">The internal rate of return allows us to see annualized return on an investment taking into account the time invested capital is recovered.
 						</div>
 							<div class="ver_video">
-								<img src="<?php echo $this->webroot; ?>img/video_icon.png"> Ver Video
+								<img src="<?php echo $this->webroot; ?>img/video_icon.png"> Watch Video
 							</div>
 					</div>
 				</div>
@@ -66,7 +67,7 @@
 			<div class="propiedad_list flip">
 				<div class="flip_items">
 					<div class="box caja front">
-						<div class="col-sm-6 pregunta"><img src="<?php echo $this->webroot; ?>img/torta_icon.png"></img>Status de la Oferta</div>
+						<div class="col-sm-6 pregunta"><img src="<?php echo $this->webroot; ?>img/torta_icon.png"></img>Live offering</div>
 						<div class="col-sm-6 respuesta" style="min-width: 200px;margin-right:0;">
 								<div class="percent">
 									<div class="top_text">
@@ -91,27 +92,27 @@
 						</div>
 					</div>
 					<div class="box caja back detras_list">
-						<div class="col-xs-6 col-md-4 bottom_pregunta">Status de la Oferta</div>
-						<div class="col-xs-12 col-sm-6 col-md-8 bottom_respuesta">Fondos recaudados hasta la fecha</div>
+						<div class="col-xs-6 col-md-4 bottom_pregunta">Live offering</div>
+						<div class="col-xs-12 col-sm-6 col-md-8 bottom_respuesta">Funds raised to date towards the targeted amount of capital for the offering</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="col-sm-6 info_right">
 			<div class="descrip_item">
-				<big>Información General</big>
+				<big>General Review</big>
 				<p><?php echo $propierty['Propierty']['info']; ?></p>
 			</div>
 
 			<div class="propiedad_list flip">
 				<div class="flip_items">
 					<div class="box caja front">
-						<div class="col-sm-6 pregunta"><img src="<?php echo $this->webroot; ?>img/retorno.png"></img>Retorno Nominal</div>
+						<div class="col-sm-6 pregunta"><img src="<?php echo $this->webroot; ?>img/retorno.png"></img>Nominal return</div>
 						<div class="col-sm-6 respuesta"><?php echo $propierty['Propierty']['retorno_nominal']; ?><span class="perc">%</span></div>
 					</div>
 					<div class="box caja back detras_list">
-						<div class="col-xs-6 col-md-4 bottom_pregunta">Retorno Nominal</div>
-						<div class="bottom_respuesta">Es la sumatoria de todas las rentas, amortizaciones y plusvalía divididas entre el capital invertido y el plazo de la inversión</div>
+						<div class="col-xs-6 col-md-4 bottom_pregunta">Nominal return</div>
+						<div class="bottom_respuesta">It is the sum of all the income, depreciation and capital gain divided between the invested capital and the term of investment.</div>
 					</div>
 				</div>
 			</div>
@@ -128,7 +129,7 @@
 			<a href="<?php echo $this->webroot; ?>files/<?php echo $propierty['Propierty']['pdf']; ?>" title="Descargar información en formato pdf" target="_blank"><div id="pdf"></div></a>
 			<?php } ?>
 			<?php if(!empty($propierty['Propierty']['xls']) || !empty($propierty['Propierty']['pdf'])){ ?>
-			<p>DESCARGAR</p>
+			<p>DOWNLOAD</p>
 			<?php } ?>
 		</div>
 	</div>

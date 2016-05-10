@@ -70,15 +70,15 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<div id="container">
 		<div id="header">
 			<div id="logo"></div>
-			<div onclick="window.location.href='<?php echo $this->webroot;?>'" class="menu_item">INICIO</div>
-			<div onclick="window.location.href='<?php echo $this->webroot;?>nosotros'" class="menu_item">NOSOTROS</div>
-			<div onclick="window.location.href='<?php echo $this->webroot;?>comoFunciona'" class="menu_item">CÓMO FUNCIONA</div>
-			<div onclick="window.location.href='<?php echo $this->webroot;?>propiedades'" class="menu_item">PROPIEDADES</div>
-			<div onclick="window.location.href='<?php echo $this->webroot;?>contacto'" class="menu_item">CONTÁCTANOS</div>
+			<div onclick="window.location.href='<?php echo $this->webroot;?>'" class="menu_item">HOME</div>
+			<div onclick="window.location.href='<?php echo $this->webroot;?>nosotros'" class="menu_item">ABOUT US</div>
+			<div onclick="window.location.href='<?php echo $this->webroot;?>comoFunciona'" class="menu_item">HOW IT WORKS</div>
+			<div onclick="window.location.href='<?php echo $this->webroot;?>propiedades'" class="menu_item">PROPERTIES</div>
+			<div onclick="window.location.href='<?php echo $this->webroot;?>contacto'" class="menu_item">CONTACT US</div>
 			<div id="menu_login">
 				<?php if(empty($user)){ ?>
-					<div onclick="window.location.href='<?php echo $this->webroot;?>login'">INGRESAR</div>
-					<div onclick="window.location.href='<?php echo $this->webroot;?>registro'">EMPIEZA AHORA</div>
+					<div onclick="window.location.href='<?php echo $this->webroot;?>login'">LOG IN</div>
+					<div onclick="window.location.href='<?php echo $this->webroot;?>registro'">GET STARTED</div>
 				<?php }else{ 
 					if($this->UserAuth->getGroupId() == 1){	?>
 										<div onclick="window.location.href='<?php echo $this->webroot;?>dashboard'"><div id="top_avatar" style="background-image : url('<?php echo $this->webroot."files/".$_SESSION["avatar"];?>');"></div>ADMIN</div>
@@ -92,15 +92,15 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			<div id="menu_movil_icon"></div>
 		</div>
 		<div id="menu_movil">
-				<div onclick="window.location.href='<?php echo $this->webroot;?>'" class="menu_item_movil">INICIO</div>
-				<div onclick="window.location.href='<?php echo $this->webroot;?>nosotros'" class="menu_item_movil">NOSOTROS</div>
-				<div onclick="window.location.href='<?php echo $this->webroot;?>comoFunciona'" class="menu_item_movil">CÓMO FUNCIONA</div>
-				<div onclick="window.location.href='<?php echo $this->webroot;?>propiedades'" class="menu_item_movil">PROPIEDADES</div>
-				<div onclick="window.location.href='<?php echo $this->webroot;?>contacto'" class="menu_item_movil">CONTÁCTANOS</div>
+				<div onclick="window.location.href='<?php echo $this->webroot;?>'" class="menu_item_movil">HOME</div>
+				<div onclick="window.location.href='<?php echo $this->webroot;?>nosotros'" class="menu_item_movil">ABOUT US</div>
+				<div onclick="window.location.href='<?php echo $this->webroot;?>comoFunciona'" class="menu_item_movil">HOW IT WORKS</div>
+				<div onclick="window.location.href='<?php echo $this->webroot;?>propiedades'" class="menu_item_movil">PROPERTIES</div>
+				<div onclick="window.location.href='<?php echo $this->webroot;?>contacto'" class="menu_item_movil">CONTACT US</div>
 				<div id="menu_login_movil">
 					<?php if(empty($user)){ ?>
-						<div onclick="window.location.href='<?php echo $this->webroot;?>login'">INGRESAR</div>
-						<div onclick="window.location.href='<?php echo $this->webroot;?>registro'">EMPIEZA AHORA</div>
+						<div onclick="window.location.href='<?php echo $this->webroot;?>login'">LOG IN</div>
+						<div onclick="window.location.href='<?php echo $this->webroot;?>registro'">GET STARTED</div>
 					<?php }else{ 
 									if($this->UserAuth->getGroupId() == 1){	?>
 										<div onclick="window.location.href='<?php echo $this->webroot;?>dashboard'"><div id="top_avatar"></div>ADMIN</div>

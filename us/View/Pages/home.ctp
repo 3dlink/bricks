@@ -19,8 +19,8 @@
           </p>
           <div class="bottom_flip flip">
             <div class="flip_items">
-              <div class="box front"><button class="slider_btn bricks_btn" type="button" onclick="window.location.href='<?php echo $this->webroot;?>nosotros'">LEER MÁS</button></div>
-              <div class="box back"><button class="slider_btn bricks_btn" type="button" onclick="window.location.href='<?php echo $this->webroot;?>nosotros'">LEER MÁS</button>
+              <div class="box front"><button class="slider_btn bricks_btn" type="button" onclick="window.location.href='<?php echo $this->webroot;?>nosotros'">READ MORE</button></div>
+              <div class="box back"><button class="slider_btn bricks_btn" type="button" onclick="window.location.href='<?php echo $this->webroot;?>nosotros'">READ MORE</button>
               </div>
             </div>
           </div>
@@ -39,12 +39,12 @@
     </div>
     <div id="quienes_somos_home_desc" class="col-md-8">
       <div class="rayita_izquierda"></div>
-      <h1>QUIÉNES SOMOS</h1>
-      <p>Bricks Asset Management LLC. nace de la necesidad de los inversionistas Latinoamericanos de tener, diversificado y bien administrado su portafolio en bienes raíces en los Estados Unidos, especializándonos en el mercado del sur este “Florida, Georgia y Texas".</p>
+      <h1>ABOUT US</h1>
+      <p>Bricks Asset Management LLC. born from the need of Latin American investors have diversified and well managed its portfolio in real estate in the United States , specializing in market south east " Florida, Georgia and Texas."</p>
       <div class="bottom_flip flip">
         <div class="flip_items">
-          <div class="box front"><button class="bricks_btn small_btn" type="button" onclick="window.location.href='<?php echo $this->webroot;?>nosotros'">Ver más</button></div>
-          <div class="box back"><button class="bricks_btn small_btn" type="button" onclick="window.location.href='<?php echo $this->webroot;?>nosotros'">Ver más</button>
+          <div class="box front"><button class="bricks_btn small_btn" type="button" onclick="window.location.href='<?php echo $this->webroot;?>nosotros'">See more</button></div>
+          <div class="box back"><button class="bricks_btn small_btn" type="button" onclick="window.location.href='<?php echo $this->webroot;?>nosotros'">See more</button>
           </div>
         </div>
       </div>
@@ -55,18 +55,18 @@
   <div id="como_funciona_home" class="col-md-12">
     <div id="texto_como_funciona" class="col-md-6">
       <div class="rayita_derecha"></div>
-      <h1>CÓMO FUNCIONA</h1>
+      <h1>HOW IT WORKS</h1>
         <div style="width:100%;float:left;">
           <div class="items_como_funciona izq">
             <p class="numeros_como_funciona">- 1 -</p>
             <p>
-              El inversionista se registra y acepta los términos y condiciones con relación a la proveniencia de los fondos
+              The investor is registered and accept the terms and conditions regarding the origin of funds
             </p>
           </div>
           <div class="items_como_funciona der">
             <p class="numeros_como_funciona">- 2 -</p>
             <p>
-              El inversionista selecciona la inversión que le interesa y se pone en contacto con el equipo de Bricks para ver su mejor estrategia de inversión
+              The investor selects the investment interests and contacts with the team Bricks to see the best investment strategy
             </p>
           </div>
         </div>
@@ -74,13 +74,13 @@
           <div class="items_como_funciona izq">
             <p class="numeros_como_funciona">- 3 -</p>
             <p>
-              Se llena y firma la documentación correspondiente, haciendo el deposito en la cuenta de garantía “escrow"
+              Complete and sign the documents and make the deposit in the escrow account
             </p>
           </div>
           <div class="items_como_funciona der">
             <p class="numeros_como_funciona">- 4 -</p>
             <p>
-            Un mes después del cierre comienza a disfrutar de sus rentas
+            A month later, starts to enjoy your income
             </p>
           </div>
         </div>
@@ -104,23 +104,23 @@
 
   <div id="experiencia_home" class="col-md-12">
     <div class="titulo">
-      <h1 id="titulo_experiencia"><div class="rayita_izquierda ray_nos"></div>EXPERIENCIA</h1>
+      <h1 id="titulo_experiencia"><div class="rayita_izquierda ray_nos"></div>EXPERIENCE</h1>
     </div>
     <div class="experiencia_content">
       <div class="experiencia_item impar first">
         <p class="nums" id="money_item">25.000</p>
         <img src="<?php echo $this->webroot; ?>img/item4.png"></img>
-        <p>US$ como el monto mínimo de inversión.</p>
+        <p>US$ as the minimum investment amount.</p>
       </div>
       <div class="experiencia_item par">
         <p class="nums" id="team_item">60</p>
         <img src="<?php echo $this->webroot; ?>img/item3.png">
-        <p>Años de experiencia combinada.</p>
+        <p>years of combined experience.</p>
       </div>
       <div class="experiencia_item impar last">
         <p class="nums" id="graph_item">9%</p>
         <img src="<?php echo $this->webroot; ?>img/item2.png">
-        <p>Tasa Interna de Retorno (TIR) promedio.</p>
+        <p>internal rate of return average.</p>
       </div>
     </div>
   </div>
@@ -145,7 +145,7 @@
   </div>
 
   <div id="contact" class="row">
-    <h1>CONTÁCTANOS</h1>
+    <h1>CONTACT US</h1>
     <div class="col-md-6" id="direccion">
       <div class="col-md-12 icons">
         <img class="iconos" src="<?php echo $this->webroot;?>img/dir_icon.png">
@@ -166,12 +166,12 @@
       </div>
     </div>
     <div class="col-md-6">
-      <input type="text" class="form-control inputs" placeholder="Nombre y Apellido" id="name">
+      <input type="text" class="form-control inputs" placeholder="Name" id="name">
       <input type="email" class="form-control inputs" placeholder="Email" id="email">
-      <input type="number" class="form-control inputs" placeholder="Teléfono" id="phone">
-      <input type="text" class="form-control inputs" placeholder="País" id="country">
-      <textarea class="form-control inputs col-xs-12" placeholder="Mensaje" cols="30" rows="10" id="cuestion"></textarea>
-      <button id="enviar" class="bricks_btn small_btn col-xs-12" type="button">ENVIAR</button>
+      <input type="number" class="form-control inputs" placeholder="Phone" id="phone">
+      <input type="text" class="form-control inputs" placeholder="Country" id="country">
+      <textarea class="form-control inputs col-xs-12" placeholder="Message" cols="30" rows="10" id="cuestion"></textarea>
+      <button id="enviar" class="bricks_btn small_btn col-xs-12" type="button">SEND</button>
     </div>
   </div>
 

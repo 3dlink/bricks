@@ -4,10 +4,10 @@
 	<img src="<?php echo $this->webroot; ?>img/contacto.png">
 
 	<div id="titulo_contacto">
-		<p id="titulo_img_contacto">Contáctenos / Línea Gratuita:</p>
+		<p id="titulo_img_contacto">Contact us /Toll Free:</p>
 		<p>
-      Internacional: +305 4593070 <br>
-			MEX: +52 55 56441842
+      Miami: +305 4593070 <br>
+			Mexico: +52 55 56441842
 		</p>
 	</div>
 
@@ -16,7 +16,7 @@
 <section id="contactanos">
 	<div id="contactanos_content">
 	<div class="titulo">
-		<h1 id="titulo_contactanos"><div class="rayita_izquierda ray_nos"></div>CONTÁCTENOS</h1>
+		<h1 id="titulo_contactanos"><div class="rayita_izquierda ray_nos"></div>CONTACT US</h1>
 	</div>
 	  <div class="col-md-6" id="direccion">
 	    <div class="col-md-12 icons">
@@ -38,12 +38,12 @@
 	    </div>
 	  </div>
 	  <div class="col-md-6">
-	    <input type="text" class="form-control inputs" placeholder="Nombre y Apellido" id="name">
+	    <input type="text" class="form-control inputs" placeholder="Name" id="name">
 	    <input type="email" class="form-control inputs" placeholder="Email" id="email">
-      <input type="number" class="form-control inputs" placeholder="Teléfono" id="phone">
-      <input type="text" class="form-control inputs" placeholder="País" id="country">
-	    <textarea class="form-control inputs col-xs-12" placeholder="Mensaje" cols="30" rows="10" id="cuestion"></textarea>
-	    <button id="enviar" class="bricks_btn small_btn col-xs-12" type="button">ENVIAR</button>
+      <input type="number" class="form-control inputs" placeholder="Phone" id="phone">
+      <input type="text" class="form-control inputs" placeholder="Country" id="country">
+	    <textarea class="form-control inputs col-xs-12" placeholder="Message" cols="30" rows="10" id="cuestion"></textarea>
+	    <button id="enviar" class="bricks_btn small_btn col-xs-12" type="button">SEND</button>
 	  </div>
 	</div>
 
@@ -120,7 +120,7 @@
   $('#enviar').click(function(){
 
     if($('#email').val() == "" || $('#cuestion').val() == "" || $('#name').val() == "" ){
-      alert('Debe ingresar al menos el nombre, email y contenido');
+      alert('You must enter at least the name, email and content');
     }else{
       $('#enviar').html("Enviando...");
       var data = {
@@ -133,7 +133,7 @@
 
       $.post(WEBROOT+'start/sendMail',{data:data},function(data){
         if(data == 1){
-            alert('Gracias. Ha establecido contacto con Bricks. En breve momentos lo estaremos contactando.');
+            alert('Thank you. It has established contact with Bricks. We will contact you soon.');
             $('#enviar').html("Enviar");
         }
       },'json');
