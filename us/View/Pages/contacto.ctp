@@ -122,7 +122,7 @@
     if($('#email').val() == "" || $('#cuestion').val() == "" || $('#name').val() == "" ){
       alert('You must enter at least the name, email and content');
     }else{
-      $('#enviar').html("Enviando...");
+      $('#enviar').html("Sending...");
       var data = {
         name : $('#name').val(),
         email : $('#email').val(),
@@ -134,7 +134,7 @@
       $.post(WEBROOT+'start/sendMail',{data:data},function(data){
         if(data == 1){
             alert('Thank you. It has established contact with Bricks. We will contact you soon.');
-            $('#enviar').html("Enviar");
+            $('#enviar').html("Send");
         }
       },'json');
     }

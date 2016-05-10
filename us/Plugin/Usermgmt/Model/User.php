@@ -259,7 +259,7 @@ class User extends UserMgmtAppModel {
 		$subject = 'Bricks USA'.': Solicitud para restablecer la contraseña';
 		$activate_key = $this->getActivationKey($user['User']['password']);
 		$link = Router::url("/activatePassword?ident=$userId&activate=$activate_key",true);
-		$content= "Bienvenido ".$user['User']['first_name'].", vamos a ayudarlo a iniciado sesión
+		$content= "Bienvenido ".$user['User']['first_name'].", vamos a ayudarlo a iniciar sesión
 
 Ha solicitado el restablecimiento de su contraseñas en ".'Bricks USA'.". Por favor, haga clic en el siguiente enlace para restablecer tu contraseña:
 

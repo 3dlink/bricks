@@ -30,12 +30,12 @@
  * ...and connect the rest of 'Pages' controller's URLs.
  */
 
-	Router::connect('/nosotros', array('controller' => 'pages', 'action' => 'nosotros'));
-	Router::connect('/contacto', array('controller' => 'pages', 'action' => 'contacto'));
-	Router::connect('/comoFunciona', array('controller' => 'pages', 'action' => 'como_funciona'));
-	Router::connect('/preguntasFrecuentes', array('controller' => 'pages', 'action' => 'preguntas_frecuentes'));
-	Router::connect('/propiedades', array('controller' => 'propierties', 'action' => 'all'));
-	Router::connect('/propiedad/*', array('controller' => 'propierties', 'action' => 'view'));
+	Router::connect('/about', array('controller' => 'pages', 'action' => 'nosotros'));
+	Router::connect('/contact', array('controller' => 'pages', 'action' => 'contacto'));
+	Router::connect('/howitworks', array('controller' => 'pages', 'action' => 'como_funciona'));
+	Router::connect('/faq', array('controller' => 'pages', 'action' => 'preguntas_frecuentes'));
+	Router::connect('/propierties', array('controller' => 'propierties', 'action' => 'all'));
+	Router::connect('/propierty/*', array('controller' => 'propierties', 'action' => 'view'));
 
 /**
  * Load all plugin routes. See the CakePlugin documentation on

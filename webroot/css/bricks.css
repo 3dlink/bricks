@@ -337,7 +337,7 @@ body{
 	*height: 100%;
 	cursor: pointer;
 	padding: 20px 0;
-	margin-right: 78px;
+	margin-right: 75px;
 }
 
 .menu_item:hover{
@@ -2171,8 +2171,24 @@ h6 {
   transform: translate(-50%,-20%);
 }
 
+.idioma {
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin-top: 20px;
+	cursor: pointer;
+}
 
+#ingles{
+	background-image: url('../img/ingles.png');
+	margin-right: 15px;
+}
 
+#espanhol{	
+	background-image: url('../img/espanol.png');
+}
 
 
 

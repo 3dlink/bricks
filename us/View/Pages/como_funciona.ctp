@@ -174,7 +174,7 @@
 				<p>Eifend elementum. Fusce porta ex imperdiet sem ornare, eget auctor lorem volutpat. Ut nec felis non purus ulla.Cras tincidunt eleifend elementum. Fusce porta ex imperdiet sem ornare, eget auctor lorem volutpat.</p>
 			</div> -->
 
-			<div class="btn_preg_frec"><button class="slider_btn bricks_btn preguntas_frecuentes" onclick="window.location.href='<?php echo $this->webroot;?>preguntasFrecuentes'" type="button">FAQ</button></div>
+			<div class="btn_preg_frec"><button class="slider_btn bricks_btn preguntas_frecuentes" onclick="window.location.href='<?php echo $this->webroot;?>faq'" type="button">FAQ</button></div>
 
 		</div>
 

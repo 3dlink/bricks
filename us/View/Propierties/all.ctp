@@ -149,10 +149,10 @@
 		        		</div>
 								<!-- <img src="<?php echo $this->webroot; ?>files/<?php echo $propierty['Upload'][0]['name']; ?>"> --><div class="box back detras_left">
 									<p><?php echo $propierty['Propierty']['info']; ?></p>
-				        	<!-- <button class="slider_btn small_btn proyecto_btn" onclick="window.location.href='<?php echo $this->webroot;?>propiedad/<?php echo $propierty['Propierty']['id']; ?>'" type="button">VER PROYECTO</button> -->
+				        	<!-- <button class="slider_btn small_btn proyecto_btn" onclick="window.location.href='<?php echo $this->webroot;?>propierty/<?php echo $propierty['Propierty']['id']; ?>'" type="button">VER PROYECTO</button> -->
 								</div>
 								<?php if($propierty['Propierty']['status_percent']<100){ ?>
-									<button class="btn_normal" onclick="window.location.href='<?php echo $this->webroot;?>propiedad/<?php echo $propierty['Propierty']['id']; ?>'" type="button">INVEST NOW</button>
+									<button class="btn_normal" onclick="window.location.href='<?php echo $this->webroot;?>propierty/<?php echo $propierty['Propierty']['id']; ?>'" type="button">INVEST NOW</button>
 								<?php }?>
 							</div>
 

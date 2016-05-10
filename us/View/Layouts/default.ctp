@@ -71,10 +71,12 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		<div id="header">
 			<div id="logo"></div>
 			<div onclick="window.location.href='<?php echo $this->webroot;?>'" class="menu_item">HOME</div>
-			<div onclick="window.location.href='<?php echo $this->webroot;?>nosotros'" class="menu_item">ABOUT US</div>
-			<div onclick="window.location.href='<?php echo $this->webroot;?>comoFunciona'" class="menu_item">HOW IT WORKS</div>
-			<div onclick="window.location.href='<?php echo $this->webroot;?>propiedades'" class="menu_item">PROPERTIES</div>
-			<div onclick="window.location.href='<?php echo $this->webroot;?>contacto'" class="menu_item">CONTACT US</div>
+			<div onclick="window.location.href='<?php echo $this->webroot;?>about'" class="menu_item">ABOUT US</div>
+			<div onclick="window.location.href='<?php echo $this->webroot;?>howitworks'" class="menu_item">HOW IT WORKS</div>
+			<div onclick="window.location.href='<?php echo $this->webroot;?>propierties'" class="menu_item">PROPERTIES</div>
+			<div onclick="window.location.href='<?php echo $this->webroot;?>contact'" class="menu_item">CONTACT US</div>
+			<div id="ingles" class="idioma" onclick="window.location.href='<?php echo $this->webroot;?>'"></div>
+			<div id="espanhol" class="idioma" onclick="window.location.href='http://bricksusa.com'"></div>
 			<div id="menu_login">
 				<?php if(empty($user)){ ?>
 					<div onclick="window.location.href='<?php echo $this->webroot;?>login'">LOG IN</div>
@@ -93,10 +95,10 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		</div>
 		<div id="menu_movil">
 				<div onclick="window.location.href='<?php echo $this->webroot;?>'" class="menu_item_movil">HOME</div>
-				<div onclick="window.location.href='<?php echo $this->webroot;?>nosotros'" class="menu_item_movil">ABOUT US</div>
-				<div onclick="window.location.href='<?php echo $this->webroot;?>comoFunciona'" class="menu_item_movil">HOW IT WORKS</div>
-				<div onclick="window.location.href='<?php echo $this->webroot;?>propiedades'" class="menu_item_movil">PROPERTIES</div>
-				<div onclick="window.location.href='<?php echo $this->webroot;?>contacto'" class="menu_item_movil">CONTACT US</div>
+				<div onclick="window.location.href='<?php echo $this->webroot;?>about'" class="menu_item_movil">ABOUT US</div>
+				<div onclick="window.location.href='<?php echo $this->webroot;?>howitworks'" class="menu_item_movil">HOW IT WORKS</div>
+				<div onclick="window.location.href='<?php echo $this->webroot;?>propierties'" class="menu_item_movil">PROPERTIES</div>
+				<div onclick="window.location.href='<?php echo $this->webroot;?>contact'" class="menu_item_movil">CONTACT US</div>
 				<div id="menu_login_movil">
 					<?php if(empty($user)){ ?>
 						<div onclick="window.location.href='<?php echo $this->webroot;?>login'">LOG IN</div>

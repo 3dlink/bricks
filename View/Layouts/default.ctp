@@ -75,6 +75,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			<div onclick="window.location.href='<?php echo $this->webroot;?>comoFunciona'" class="menu_item">CÓMO FUNCIONA</div>
 			<div onclick="window.location.href='<?php echo $this->webroot;?>propiedades'" class="menu_item">PROPIEDADES</div>
 			<div onclick="window.location.href='<?php echo $this->webroot;?>contacto'" class="menu_item">CONTÁCTANOS</div>
+			<div id="ingles" class="idioma" onclick="window.location.href='<?php echo $this->webroot;?>us'"></div>
+			<div id="espanhol" class="idioma" onclick="window.location.href='<?php echo $this->webroot;?>'"></div>
 			<div id="menu_login">
 				<?php if(empty($user)){ ?>
 					<div onclick="window.location.href='<?php echo $this->webroot;?>login'">INGRESAR</div>

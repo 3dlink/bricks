@@ -72,7 +72,7 @@ class UserAuthComponent extends Component {
 				if (!$userGroupModel->isGuestAccess($controller, $action)) {
 					$c->log('permission: actionUrl-'.$actionUrl, LOG_DEBUG);
 					$c->Session->write('permission_error_redirect','/users/login');
-					$c->Session->setFlash('Tienes que iniciar sesión para ver esta página.', 'default', array('class' => 'error_message'));
+					$c->Session->setFlash('You must be logged in to view this page.', 'default', array('class' => 'error_message'));
 					$cUrl = '/'.$c->params->url;
 					if(!empty($_SERVER['QUERY_STRING'])) {
 						$rUrl = $_SERVER['REQUEST_URI'];

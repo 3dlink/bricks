@@ -337,7 +337,7 @@ body{
 	*height: 100%;
 	cursor: pointer;
 	padding: 20px 0;
-	margin-right: 78px;
+	margin-right: 75px;
 }
 
 .menu_item:hover{
@@ -679,7 +679,7 @@ h1{
 }
 
 #experiencia_home {
-	margin-top: 35px;
+	margin-top: 75px;
 	float: left;
 	padding: 0;
 }
@@ -1068,7 +1068,7 @@ h2 {
 }
 
 #titulo_filosofia {
-	width: 114px;
+	width: 145px;
 }
 
 
@@ -1639,10 +1639,10 @@ h3 {
 }
 
 #titulo_operamos {
-  width: 193px;
+  width: 204px;
   margin: 0;
   margin-bottom: 40px;
-  margin-top: 30px;
+  margin-top: 65px;
   float: right;
 }
 
@@ -1692,7 +1692,7 @@ h3 {
 #ofrecemos {
 	float: left;
 	width: 100%;
-	margin-top: 15px;
+	margin-top: 55px;
 }
 
 .text_ofrecemos {
@@ -1722,7 +1722,7 @@ h5 {
 #tipos {
 	float: left;
 	width: 100%;
-	margin-top: 40px;
+	margin-top: 65px;
 }
 
 #titulo_tipos {
@@ -1742,7 +1742,7 @@ h5 {
 	background-size: cover;
 	font-family: 'Canter';
 	font-weight: bold;
-	font-size: 50px;
+	font-size: 47px;
 	color: white;
 	text-align: center;
 	padding-top: 75px;
@@ -2169,6 +2169,25 @@ h6 {
   bottom: 0;
   left: 50%;
   transform: translate(-50%,-20%);
+}
+
+.idioma {
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+#ingles{
+	background-image: url('../img/ingles.png');
+	margin-right: 15px;
+}
+
+#espanhol{	
+	background-image: url('../img/espanol.png');
 }
 
 

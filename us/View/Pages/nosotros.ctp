@@ -127,7 +127,7 @@
     </div> -->
 
     <div id="experiencia_extract">
-      Bricks offers  <b style="color:#d9882f;">equity investments in commercial real estate, focused on small investors who don´t have access to investments offered only to large investors through a selection process of institutional investment type
+      Bricks offers  <b style="color:#d9882f;">equity investments in commercial real estate, focused on small investors who don´t have access to investments offered only to large investors</b> through a selection process of institutional investment type
     </div>
 
     <p class="experiencia_parrafo">
