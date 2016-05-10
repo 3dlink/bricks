@@ -1,0 +1,15 @@
+2016-05-10 09:26:55 Error: [SocketException] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión.
+
+Request URL: /bricks/us/start/sendMail
+Stack Trace:
+#0 C:\xampp\htdocs\bricks\cakephp\lib\Cake\Network\Email\SmtpTransport.php(154): CakeSocket->connect()
+#1 C:\xampp\htdocs\bricks\cakephp\lib\Cake\Network\Email\SmtpTransport.php(95): SmtpTransport->_connect()
+#2 C:\xampp\htdocs\bricks\cakephp\lib\Cake\Network\Email\CakeEmail.php(1158): SmtpTransport->send(Object(CakeEmail))
+#3 C:\xampp\htdocs\bricks\us\Controller\StartController.php(37): CakeEmail->send('Has recibido un...')
+#4 C:\xampp\htdocs\bricks\us\Controller\StartController.php(25): StartController->__enviar_correo('info@bricksusa....', Array, 'Tienes un nuevo...', 'Has recibido un...')
+#5 [internal function]: StartController->sendMail()
+#6 C:\xampp\htdocs\bricks\cakephp\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(StartController), Array)
+#7 C:\xampp\htdocs\bricks\cakephp\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\htdocs\bricks\cakephp\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(StartController), Object(CakeRequest))
+#9 C:\xampp\htdocs\bricks\us\webroot\index.php(112): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}

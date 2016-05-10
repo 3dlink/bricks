@@ -61,12 +61,12 @@ class User extends UserMgmtAppModel {
 				'email'=> array(
 					'mustNotEmpty'=>array(
 						'rule' => 'notEmpty',
-						'message'=> 'Ingrese correo o usuario')
+						'message'=> 'Enter email or user')
 					),
 				'password'=>array(
 					'mustNotEmpty'=>array(
 						'rule' => 'notEmpty',
-						'message'=> 'Ingrese Password')
+						'message'=> 'Enter Password')
 					)
 			);
 		$this->validate=$validate1;
@@ -82,56 +82,56 @@ class User extends UserMgmtAppModel {
 				'first_name'=> array(
 					'mustNotEmpty'=>array(
 						'rule' => 'notEmpty',
-						'message'=> 'Introduzca el nombre')
+						'message'=> 'Enter the name')
 					),
 				'last_name'=> array(
 					'mustNotEmpty'=>array(
 						'rule' => 'notEmpty',
 						'on' => 'create',
-						'message'=> 'Introduzca el apellido')
+						'message'=> 'Enter the last name')
 					),
 				'email'=> array(
 					'mustNotEmpty'=>array(
 						'rule' => 'notEmpty',
-						'message'=> 'Introduzca el correo electrónico',
+						'message'=> 'Enter the email',
 						'last'=>true),
 					'mustBeEmail'=> array(
 						'rule' => array('email'),
-						'message' => 'Introduzca un correo electrónico válido',
+						'message' => 'Enter a valid email',
 						'last'=>true),
 					'mustUnique'=>array(
 						'rule' =>'isUnique',
-						'message' =>'Este correo ya se encuentra registrado',
+						'message' =>'This email is already registered',
 						)
 					),
 				'phone'=> array(
 						'mustNotEmpty'=>array(
 								'rule' => 'notEmpty',
-								'message'=> 'Introduzca un numero de teléfono válido')
+								'message'=> 'Enter a valid phone number')
 				),
 				'oldpassword'=>array(
 					'mustNotEmpty'=>array(
 						'rule' => 'notEmpty',
-						'message'=> 'Por favor introduzca la contraseña actual',
+						'message'=> 'Please enter your current password',
 						'last'=>true),
 					'mustMatch'=>array(
 						'rule' => array('verifyOldPass'),
-						'message' => 'Por favor introduzca la contraseña actual correctamente'),
+						'message' => 'Please enter the current password correctly'),
 					),
 				'password'=>array(
 					'mustNotEmpty'=>array(
 						'rule' => 'notEmpty',
-						'message'=> 'Introduzca la contraseña',
+						'message'=> 'Enter the password',
 						'on' => 'create',
 						'last'=>true),
 					'mustBeLonger'=>array(
 						'rule' => array('minLength', 6),
-						'message'=> 'La contraseña debe ser mayor a 5 caracteres',
+						'message'=> 'The password must contain more than 5 characters',
 						'on' => 'create',
 						'last'=>true),
 					'mustMatch'=>array(
 						'rule' => array('verifies'),
-						'message' => 'Ambas contraseñas deben coincidir'),
+						'message' => 'Both passwords must match'),
 						//'on' => 'create'
 					)
 			);
@@ -192,9 +192,9 @@ class User extends UserMgmtAppModel {
 		$email->from(array( $fromConfig => $fromNameConfig));
 		$email->sender(array( $fromConfig => $fromNameConfig));
 		$email->to($user['User']['email']);
-		$email->subject('Su registro se ha completado');
+		$email->subject('Your registration is completed');
 		//$email->transport('Debug');
-		$body="Bienvenido ".$user['User']['first_name'].", Gracias por tu registro y confianza en Bricks USA \n\n ".EMAIL_FROM_NAME;
+		$body="Welcome ".$user['User']['first_name'].", Thank you for your registration and confidence in Bricks USA \n\n ".EMAIL_FROM_NAME;
 		try{
 			$result = $email->send($body);
 		} catch (Exception $ex) {
@@ -215,7 +215,7 @@ class User extends UserMgmtAppModel {
 		$userId=$user['User']['id'];
 		$activate_key = $this->getActivationKey($user['User']['password']);
 		$link = Router::url("/userVerification?ident=$userId&activate=$activate_key",true);
-		$body="Hola ".$user['User']['first_name'].", Click en el link de abajo para completar tu registro \n\n ".$link;
+		$body="Hola ".$user['User']['first_name'].", Click on the link below to complete your registration \n\n ".$link;
 		$Email = new CakeEmail();
 		
 		try{
@@ -256,28 +256,32 @@ class User extends UserMgmtAppModel {
 		$fromNameConfig = 'Bricks USA';
 		$from = array('info@bricksusa.com');
 		$to = $user['User']['email'];
-		$subject = 'Bricks USA'.': Solicitud para restablecer la contraseña';
+		$subject = 'Bricks USA'.': Request to reset the password';
 		$activate_key = $this->getActivationKey($user['User']['password']);
 		$link = Router::url("/activatePassword?ident=$userId&activate=$activate_key",true);
+<<<<<<< HEAD
 		$content= "Bienvenido ".$user['User']['first_name'].", vamos a ayudarlo a iniciar sesión
+=======
+		$content= "Welcome ".$user['User']['first_name'].", we will help you to log in
+>>>>>>> 16010f6758c3cfff90f612887b2bd5309c0ab673
 
-Ha solicitado el restablecimiento de su contraseñas en ".'Bricks USA'.". Por favor, haga clic en el siguiente enlace para restablecer tu contraseña:
+It has requested the return your passwords in ".'Bricks USA '.". Please click the following link to reset your password:
 
 ".$link."
 
 
-Si el enlace anterior no funciona por favor, copie y pegue el enlace URL (arriba) en la barra de direcciones del navegador para llegar a la página para restablecer la contraseña
+If the link above does not work please copy and paste the URL link (above) in the browser address bar to get to the password reset page
 
-Elija una contraseña que pueda recordar y por favor mantenerla segura.
+Choose a password that you can remember and please keep it safe.
 
-Gracias,\n".
+Thank you,\n".
 
 'Bricks USA';
 		try{
 			$result = $this->__enviar_correo($from, $to, $subject, $content);
 		} catch (Exception $ex){
 			// we could not send the email, ignore it
-			$result="No se pudo enviar olvidó email contraseña para userid-".$userId;
+			$result="we could not send the email to-".$userId;
 		}
 		$this->log($result, LOG_DEBUG);
 	}

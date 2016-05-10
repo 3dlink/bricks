@@ -1,2 +1,6 @@
+<<<<<<< HEAD
 1462895307
+=======
+1462894235
+>>>>>>> 16010f6758c3cfff90f612887b2bd5309c0ab673
 a:2:{i:0;b:0;s:3:"app";a:2:{s:7:"plugins";a:1:{i:0;s:8:"Usermgmt";}s:10:"Controller";a:12:{i:0;s:13:"AppController";i:1;s:17:"EquiposController";i:2;s:14:"FaqsController";i:3;s:15:"HomesController";i:4;s:15:"PagesController";i:5;s:21:"PropiertiesController";i:6;s:25:"SeodescriptionsController";i:7;s:21:"SeokeywordsController";i:8;s:15:"StartController";i:9;s:21:"TestimoniosController";i:10;s:16:"VideosController";i:11;s:15:"WorksController";}}}
