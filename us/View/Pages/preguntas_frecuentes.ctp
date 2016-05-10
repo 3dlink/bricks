@@ -1,6 +1,6 @@
 <section id="preguntas">
 	<div id="preguntas_content">
-			<h6>PREGUNTAS FRECUENTES</h6>
+			<h6>FAQ</h6>
 
 			<div class="panel-group">
 				<?php foreach ($faqs as $key=>$value) { ?>
